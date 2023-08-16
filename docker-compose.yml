@@ -1,6 +1,6 @@
 version: '3'
 services:
-  frontend:
+  dev:
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -9,3 +9,11 @@ services:
     volumes:
       - /home/node/app/node_modules
       - .:/home/node/app
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]
