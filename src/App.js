@@ -12,7 +12,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Click here if "yes"
+          Aye
         </a>
       </header>
     </div>
